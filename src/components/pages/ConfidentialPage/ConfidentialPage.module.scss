@@ -1,0 +1,18 @@
+.container {
+  margin-top: 25px;
+  margin-bottom: 64px;
+}
+.content {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  /* or 138% */
+
+  letter-spacing: 0.05em;
+
+  & span {
+    font-weight: 800;
+  }
+}

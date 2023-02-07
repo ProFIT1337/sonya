@@ -1,0 +1,39 @@
+.fieldWrapper {
+  position: relative;
+  &::before {
+    content: url(../../../../img/search.svg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 17px;
+    left: 16px;
+
+    width: 20px;
+    height: 20px;
+  }
+}
+.field {
+  height: 54px;
+  width: 100%;
+
+  padding-left: 44px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background-color: #ececec;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #8e8e8e;
+
+  &::placeholder {
+    color: #8e8e8e;
+  }
+}

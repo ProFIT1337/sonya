@@ -1,0 +1,19 @@
+.arrow {
+  position: absolute;
+  top: -36px;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  transform: rotateZ(180deg);
+
+  & path {
+    fill: #8e8e8e;
+    transition: fill 0.3s ease;
+  }
+
+  &:hover {
+    & path {
+      fill: #000;
+    }
+  }
+}

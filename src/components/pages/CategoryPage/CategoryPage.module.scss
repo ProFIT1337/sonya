@@ -1,0 +1,52 @@
+.breadCrumbs {
+  margin-bottom: 20px;
+}
+
+.title {
+  margin-bottom: 36px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 39px;
+  letter-spacing: 0.05em;
+}
+.attention {
+  width: 100%;
+
+  margin-bottom: 40px;
+}
+.filters {
+  margin-bottom: 40px;
+}
+.products {
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 40px;
+}
+.product {
+}
+
+.description {
+  margin-bottom: 40px;
+
+  white-space: pre-wrap;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+
+  letter-spacing: 0.05em;
+
+  color: #000000;
+}
+
+.pagination {
+  margin-bottom: 64px;
+  text-align: center;
+}

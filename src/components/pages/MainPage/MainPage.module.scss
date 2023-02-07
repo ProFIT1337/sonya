@@ -1,0 +1,72 @@
+.container {
+  margin-top: 62px;
+}
+
+.title {
+  margin-bottom: 19px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 39px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+}
+
+.description {
+  max-width: 700px;
+
+  margin-bottom: 40px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  /* or 138% */
+
+  letter-spacing: 0.05em;
+}
+
+.more {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  /* or 138% */
+
+  letter-spacing: 0.05em;
+
+  color: #007abf;
+
+  cursor: pointer;
+}
+
+.promo {
+  margin-bottom: 40px;
+
+  cursor: pointer;
+}
+
+.popular {
+  margin-bottom: 40px;
+}
+
+.attention {
+  margin-bottom: 40px;
+}
+
+.in_stock {
+  margin-bottom: 40px;
+}
+
+.pluses {
+  margin-bottom: 40px;
+}
+
+.map {
+  margin-bottom: 64px;
+}

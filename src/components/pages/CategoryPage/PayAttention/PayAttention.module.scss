@@ -1,0 +1,25 @@
+.wrapper {
+  position: relative;
+  padding: 20px;
+
+  background-color: #f2f2f2;
+}
+
+.text {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  /* or 138% */
+
+  letter-spacing: 0.05em;
+}
+
+.cross {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+
+  cursor: pointer;
+}

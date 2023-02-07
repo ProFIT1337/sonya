@@ -1,0 +1,32 @@
+.link {
+  position: relative;
+
+  margin-right: 24px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  color: #000000;
+
+  &:last-child {
+    color: #8e8e8e;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  &::after {
+    content: url('../../../img/breadcrumbs/arrow.svg');
+    position: absolute;
+    top: 0px;
+    right: -12px;
+  }
+}

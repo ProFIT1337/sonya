@@ -1,0 +1,100 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.before {
+  display: flex;
+  height: 28px;
+  align-items: center;
+
+  margin-right: 20px;
+
+  cursor: pointer;
+
+  user-select: none;
+}
+
+.beforeArrow {
+  position: relative;
+  top: 2px;
+  padding: 6px;
+}
+.beforeText {
+  position: relative;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+}
+
+.numbers {
+  display: flex;
+
+  margin-right: 20px;
+}
+
+.number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 28px;
+  height: 28px;
+
+  border-radius: 4px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+
+  &.active {
+    background-color: #ececec;
+  }
+}
+
+.after {
+  display: flex;
+  height: 28px;
+  align-items: center;
+
+  cursor: pointer;
+
+  user-select: none;
+}
+
+.afterArrow {
+  position: relative;
+  top: -2px;
+
+  padding: 6px;
+
+  transform: rotateZ(180deg);
+}
+.afterText {
+  position: relative;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+}
