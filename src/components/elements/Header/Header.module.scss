@@ -3,6 +3,13 @@
 
   padding-top: 24px;
   padding-bottom: 24px;
+  @media (max-width: 900px) {
+    flex-wrap: wrap;
+    row-gap: 8px;
+
+    padding-top: 10px;
+    padding-bottom: 12px;
+  }
 }
 
 .logo {
@@ -11,21 +18,64 @@
   height: 54px;
   width: 101px;
   min-width: 101px;
+  @media (max-width: 900px) {
+    margin-right: auto;
+  }
 }
 
 .catalog {
   margin-right: 20px;
+
+  @media (max-width: 1200px) {
+    margin-right: unset;
+    order: 4;
+  }
 }
 
 .search {
   width: 100%;
   margin-right: 25px;
+
+  @media (max-width: 900px) {
+    width: 100%;
+    order: 5;
+
+    margin-right: unset;
+  }
 }
 
 .contacts {
   display: block;
   margin-right: 16px;
+
+  @media (max-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .about {
   margin-right: 16px;
+
+  @media (max-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
+
+.card {
+  @media (max-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 16px;
+  }
+}
+
+// .burger {
+//   width: 24px;
+//   height: 2px;
+//   background-color: #000;
+// }

@@ -10,6 +10,9 @@
   background-color: transparent;
 
   border: 0;
+  @media (max-width: 1200px) {
+    min-width: 30px;
+  }
 }
 
 .img {
@@ -22,4 +25,8 @@
   font-weight: 600;
   font-size: 12px;
   line-height: 15px;
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
 }

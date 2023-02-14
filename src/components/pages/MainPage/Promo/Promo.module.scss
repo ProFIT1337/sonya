@@ -9,21 +9,40 @@
     height: 100%;
     object-fit: cover;
   }
+
+  @media (max-width: 900px) {
+    gap: 4px;
+    grid-template-rows: 217px 120px;
+  }
 }
 
 .promo__main {
   position: relative;
   grid-column: 1/2;
   grid-row: 1/4;
+
+  @media (max-width: 900px) {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
 }
 
 .promo__secondary_first {
   grid-column: 2/3;
   grid-row: 1/3;
+
+  @media (max-width: 900px) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
 }
 .promo__secondary_second {
   grid-column: 2/3;
   grid-row: 3/4;
+
+  @media (max-width: 900px) {
+    grid-row: 2/3;
+  }
 }
 
 .promo__text {
@@ -47,5 +66,9 @@
     font-size: 60px;
     line-height: 73px;
     letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 900px) {
+    left: 18px;
   }
 }

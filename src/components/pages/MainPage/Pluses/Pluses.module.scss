@@ -4,12 +4,25 @@
 
   padding-top: 50px;
   padding-bottom: 50px;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 }
 
 .item {
   display: flex;
   align-items: center;
   width: 360px;
+
+  @media (max-width: 800px) {
+    margin-bottom: 50px;
+    width: 100%;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 .photo {
   margin-right: 23px;

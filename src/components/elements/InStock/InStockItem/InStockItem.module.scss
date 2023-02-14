@@ -3,6 +3,10 @@
   flex-direction: column;
 
   margin-right: 32px;
+  @media (max-width: 420px) {
+    margin-right: 16px;
+    padding: 2px;
+  }
 }
 .photo {
   width: 343px;
@@ -16,6 +20,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  @media (max-width: 420px) {
+    width: 220px;
+    height: 236px;
   }
 }
 .title {
@@ -38,11 +47,26 @@
   letter-spacing: 0.05em;
 
   color: #8e8e8e;
+  @media (max-width: 420px) {
+    margin-bottom: 0;
+  }
 }
 
 .footer {
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 420px) {
+    flex-direction: column;
+  }
+}
+
+.prices {
+  @media (max-width: 420px) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
 }
 
 .old_price {
@@ -77,6 +101,11 @@
 
     background-color: #c4c4c4;
   }
+
+  @media (max-width: 420px) {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
 }
 
 .new_price {
@@ -86,8 +115,15 @@
   font-size: 24px;
   line-height: 29px;
   letter-spacing: 0.05em;
+
+  @media (max-width: 420px) {
+    margin-right: 11px;
+  }
 }
 
 .button {
   width: 149px;
+  @media (max-width: 420px) {
+    width: 100%;
+  }
 }

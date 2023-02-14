@@ -3,11 +3,22 @@
   padding-bottom: 16px;
 
   background-color: #ececec;
+
+  @media (max-width: 1200px) {
+    padding-top: 38px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 .container {
   display: flex;
   position: relative;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .logo {
@@ -16,14 +27,34 @@
   height: 86px;
 
   margin-right: 83px;
+
+  @media (max-width: 1200px) {
+    order: 2;
+    width: 101px;
+    height: 54px;
+    min-width: unset;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 47px;
+  }
 }
 
 .links {
   display: flex;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
 }
 
 .catalog {
   margin-right: 83px;
+
+  @media (max-width: 1200px) {
+    margin-bottom: 16px;
+    margin-right: 0;
+  }
 }
 
 .catalog__title {
@@ -34,6 +65,19 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
+
+  @media (max-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 0;
+    width: 100%;
+    border-bottom: 1px solid #8e8e8e;
+
+    &::after {
+      content: url('../../../img/footer/arrow.svg');
+    }
+  }
 }
 
 .catalog__links {
@@ -41,6 +85,10 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 97px;
   row-gap: 8px;
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
 }
 .catalog__link {
   font-family: 'Montserrat';
@@ -52,6 +100,11 @@
 
 .about {
   margin-right: 187px;
+
+  @media (max-width: 1200px) {
+    margin-bottom: 32px;
+    margin-right: 0;
+  }
 }
 .about__title {
   margin-bottom: 16px;
@@ -61,10 +114,25 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
+
+  @media (max-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    border-bottom: 1px solid #8e8e8e;
+
+    &::after {
+      content: url('../../../img/footer/arrow.svg');
+    }
+  }
 }
 .about__links {
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
 }
 .about__link {
   margin-bottom: 8px;
@@ -113,9 +181,15 @@
 
 .contacts__logos {
   display: flex;
+  @media (max-width: 1200px) {
+    justify-content: space-between;
+  }
 }
 .contacts__logo {
   margin-right: 20px;
+  @media (max-width: 1200px) {
+    margin-right: 0;
+  }
 }
 
 .defense {
@@ -128,4 +202,10 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
+
+  @media (max-width: 1200px) {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
 }

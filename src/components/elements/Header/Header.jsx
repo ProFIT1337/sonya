@@ -8,28 +8,50 @@ import AboutButton from './AboutButton/AboutButton';
 import CardButton from './CardButton/CardButton';
 import CatalogMenu from './CatalogMenu/CatalogMenu';
 import { getCatalog } from '../../../functions/getCatalog';
+import useWindowSize from '../../../functions/useWindowSize';
 const Header = () => {
   const [catalogData, setCatalogData] = useState([]);
   const [isCatalogActive, setIsCatalogActive] = useState(false);
+  const [windowWidth] = useWindowSize();
 
   useEffect(() => {
     getCatalog().then((res) => setCatalogData(res));
   });
+
   return (
     <div
       className={styles.container}
-      onPointerLeave={() => {
-        setIsCatalogActive(false);
-      }}>
+      onPointerLeave={
+        windowWidth >= 1200
+          ? () => {
+              setIsCatalogActive(false);
+            }
+          : null
+      }>
       <header className={styles.header}>
         <div className={styles.logo}>
           <LogoButton />
         </div>
         <div
           className={styles.catalog}
-          onPointerEnter={() => {
-            setIsCatalogActive(true);
-          }}>
+          onPointerEnter={
+            windowWidth >= 1200
+              ? () => {
+                  setIsCatalogActive(true);
+                }
+              : null
+          }
+          onPointerUp={
+            windowWidth < 1200
+              ? () => {
+                  if (isCatalogActive) {
+                    setIsCatalogActive(false);
+                  } else {
+                    setIsCatalogActive(true);
+                  }
+                }
+              : null
+          }>
           <CatalogButton />
         </div>
         <div className={styles.search}>

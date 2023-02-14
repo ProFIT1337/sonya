@@ -22,3 +22,36 @@
 
   color: #fff;
 }
+
+.mobileButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+  min-width: 24px;
+}
+.burger {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #000;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -9px;
+    width: 24px;
+    height: 2px;
+    background-color: #000;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 9px;
+    width: 24px;
+    height: 2px;
+    background-color: #000;
+  }
+}
