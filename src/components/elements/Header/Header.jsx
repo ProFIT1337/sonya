@@ -9,7 +9,9 @@ import CardButton from './CardButton/CardButton';
 import CatalogMenu from './CatalogMenu/CatalogMenu';
 import { getCatalog } from '../../../functions/getCatalog';
 import useWindowSize from '../../../functions/useWindowSize';
+import { useLocation } from 'react-router-dom';
 const Header = () => {
+  let location = useLocation();
   const [catalogData, setCatalogData] = useState([]);
   const [isCatalogActive, setIsCatalogActive] = useState(false);
   const [windowWidth] = useWindowSize();
@@ -17,6 +19,10 @@ const Header = () => {
   useEffect(() => {
     getCatalog().then((res) => setCatalogData(res));
   });
+  useEffect(() => {
+    setIsCatalogActive(false);
+    console.log(123);
+  }, [location.pathname]);
 
   return (
     <div

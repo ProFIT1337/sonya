@@ -1,0 +1,52 @@
+.container {
+  position: relative;
+
+  margin-bottom: 16px;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+
+  margin-bottom: 16px;
+
+  border: 0;
+
+  padding: 0;
+
+  background-color: transparent;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+
+  &::after {
+    content: url(../../../../../../img/catalogMenuArrow.svg);
+    transform-origin: center;
+    position: relative;
+    height: 19px;
+  }
+
+  &.active {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    text-decoration-line: underline;
+
+    color: #000000;
+
+    &::after {
+      content: url(../../../../../../img/catalogMenuArrowActive.svg);
+      transform: rotateZ(90deg) translateY(3px);
+    }
+  }
+}
+.categories {
+  padding-left: 16px;
+}

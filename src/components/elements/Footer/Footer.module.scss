@@ -74,6 +74,8 @@
     width: 100%;
     border-bottom: 1px solid #8e8e8e;
 
+    cursor: pointer;
+
     &::after {
       content: url('../../../img/footer/arrow.svg');
     }
@@ -88,6 +90,13 @@
 
   @media (max-width: 1200px) {
     display: none;
+
+    &.open {
+      display: flex;
+      flex-direction: column;
+      padding-top: 8px;
+      cursor: pointer;
+    }
   }
 }
 .catalog__link {
@@ -121,6 +130,8 @@
     margin-bottom: 0;
     border-bottom: 1px solid #8e8e8e;
 
+    cursor: pointer;
+
     &::after {
       content: url('../../../img/footer/arrow.svg');
     }
@@ -132,6 +143,13 @@
 
   @media (max-width: 1200px) {
     display: none;
+
+    &.open {
+      display: flex;
+      flex-direction: column;
+      padding-top: 8px;
+      cursor: pointer;
+    }
   }
 }
 .about__link {

@@ -9,8 +9,11 @@ import { ReactComponent as Whatsapp } from '../../../img/contacts/watsapp.svg';
 import { ReactComponent as Tg } from '../../../img/contacts/tg.svg';
 import { ReactComponent as Viber } from '../../../img/contacts/viber.svg';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 function Footer() {
+  const [isCatalogOpen, setIsCatalogOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
   return (
     <footer className={styles.footer}>
       <div className='wrapper'>
@@ -20,8 +23,14 @@ function Footer() {
           </div>
           <div className={styles.links}>
             <div className={styles.catalog}>
-              <div className={styles.catalog__title}>Каталог</div>
-              <div className={styles.catalog__links}>
+              <div
+                className={styles.catalog__title}
+                onClick={() => {
+                  setIsCatalogOpen(!isCatalogOpen);
+                }}>
+                Каталог
+              </div>
+              <div className={styles.catalog__links + ' ' + (isCatalogOpen ? styles.open : '')}>
                 <div className={styles.catalog__link}>Мебель</div>
                 <div className={styles.catalog__link}>Текстиль</div>
                 <div className={styles.catalog__link}>Посуда</div>
@@ -31,8 +40,14 @@ function Footer() {
               </div>
             </div>
             <div className={styles.about}>
-              <div className={styles.about__title}>Клиентский сервис</div>
-              <div className={styles.about__links}>
+              <div
+                className={styles.about__title}
+                onClick={() => {
+                  setIsAboutOpen(!isAboutOpen);
+                }}>
+                Клиентский сервис
+              </div>
+              <div className={styles.about__links + ' ' + (isAboutOpen ? styles.open : '')}>
                 <Link to='/about' className={styles.about__link}>
                   О нас
                 </Link>

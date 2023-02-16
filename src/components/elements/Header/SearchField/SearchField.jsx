@@ -1,15 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styles from './SearchField.module.scss';
+import useWindowSize from '../../../../functions/useWindowSize';
 const SearchField = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [windowWidth] = useWindowSize();
+  let isMobile = windowWidth < 600;
 
-  useEffect(() => {
-    if (window.innerWidth < 600) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  }, []);
   return (
     <div className={styles.fieldWrapper}>
       <input
