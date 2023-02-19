@@ -14,6 +14,11 @@
   /* or 138% */
 
   letter-spacing: 0.05em;
+
+  @media (max-width: 1200px) {
+    font-size: 12px;
+    line-height: 15px;
+  }
 }
 
 .cross {

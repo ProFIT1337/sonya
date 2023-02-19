@@ -32,6 +32,10 @@
   /* identical to box height */
 
   letter-spacing: 0.05em;
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
 }
 
 .numbers {
@@ -97,4 +101,8 @@
   /* identical to box height */
 
   letter-spacing: 0.05em;
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
 }

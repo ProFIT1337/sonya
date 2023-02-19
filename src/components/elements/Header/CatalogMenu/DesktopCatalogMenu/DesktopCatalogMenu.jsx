@@ -6,8 +6,10 @@ const DesktopCatalogMenu = ({ data, activePlace, setActivePlace }) => {
   let navigate = useNavigate();
 
   useEffect(() => {
-    setActivePlace(data[0]);
-  }, []);
+    if (data) {
+      setActivePlace(data[0]);
+    }
+  }, [data]);
 
   return (
     <div className={styles.container}>

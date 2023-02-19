@@ -11,14 +11,22 @@
   font-size: 32px;
   line-height: 39px;
   letter-spacing: 0.05em;
+
+  @media (max-width: 1200px) {
+    margin-bottom: 20px;
+  }
 }
 .attention {
   width: 100%;
 
   margin-bottom: 40px;
+
+  @media (max-width: 1200px) {
+    margin-bottom: 24px;
+  }
 }
 .filters {
-  margin-bottom: 40px;
+  // margin-bottom: 40px;
 }
 .products {
   margin-bottom: 40px;
@@ -26,8 +34,24 @@
   flex-wrap: wrap;
   column-gap: 20px;
   row-gap: 40px;
+
+  @media (max-width: 1200px) {
+    justify-content: space-between;
+
+    // column-gap: 8px;
+    row-gap: 23px;
+  }
 }
 .product {
+  @media (max-width: 1200px) {
+    flex: 0 0 28%;
+  }
+  @media (max-width: 700px) {
+    flex: 0 0 45%;
+  }
+  // @media (max-width: 400px) {
+  //   flex: 0 0 100%;
+  // }
 }
 
 .description {
@@ -44,6 +68,9 @@
   letter-spacing: 0.05em;
 
   color: #000000;
+  @media (max-width: 1200px) {
+    margin-bottom: 24px;
+  }
 }
 
 .pagination {

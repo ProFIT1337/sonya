@@ -4,6 +4,9 @@
 }
 .title {
   margin-bottom: 36px;
+  @media (max-width: 1200px) {
+    margin-bottom: 20px;
+  }
 }
 .place {
   margin-bottom: 40px;
@@ -16,10 +19,19 @@
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.05em;
+
+  @media (max-width: 1200px) {
+    margin-bottom: 8px;
+  }
 }
 .categories {
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: 1200px) {
+    justify-content: space-between;
+    // justify-content: flex-start;
+  }
 }
 
 .category {
@@ -30,7 +42,38 @@
 
   &:nth-child(3n) {
     margin-right: 0;
+    @media (max-width: 610px) {
+      margin-right: 20px;
+    }
   }
+  &:nth-child(2n) {
+    @media (max-width: 610px) {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    flex: 0 0 31%;
+    display: block;
+
+    // display: flex;
+    // justify-content: flex-start;
+
+    // margin-right: unset;
+    // // flex-grow: 1;
+    // margin-bottom: 8px;
+  }
+  @media (max-width: 610px) {
+    flex: 0 0 46%;
+  }
+  @media (max-width: 400px) {
+    margin-right: 0;
+    flex: 0 0 100%;
+  }
+}
+.category_blank {
+  width: 100%;
+  margin-bottom: 0;
 }
 
 .text__title {

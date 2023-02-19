@@ -1,17 +1,20 @@
 .button {
   display: flex;
+  position: relative;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 16px 0;
   width: calc(100% - 2px);
-  height: calc(100% - 2px);
+  height: calc(100%);
 
   background-color: transparent;
-  border: none;
+  border: 1px #000 solid;
+
+  -webkit-border-radius: 8px;
   border-radius: 8px;
-  outline: 1px #000 solid;
-  transition: outline 0.3s ease;
+  // outline: 1px #000 solid;
+  transition: box-shadow 0.3s ease;
 
   cursor: pointer;
 
@@ -26,7 +29,7 @@
   color: #000;
 
   &:hover {
-    outline: 2px #000 solid;
+    box-shadow: 0px 0px 4px 0px #000;
   }
   &:active {
     background-color: #000;

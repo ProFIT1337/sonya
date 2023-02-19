@@ -2,13 +2,17 @@ import React from 'react';
 import BreadCrumbs from '../../elements/BreadCrumbs/BreadCrumbs';
 import styles from './ContactsPage.module.scss';
 import Map from '../../elements/Map/Map';
+import useWindowSize from '../../../functions/useWindowSize';
+import BackButton from '../../elements/BackButton/BackButton';
 
 const BREADCRUMBSDATA = [{ link: '/contacts', text: 'Контакты' }];
 
 const ContactsPage = () => {
+  const [windowWidth] = useWindowSize();
+  const isMobile = windowWidth < 1200;
   return (
     <div className={styles.container}>
-      <BreadCrumbs items={BREADCRUMBSDATA} />
+      {isMobile ? <BackButton text='Икеа Красноярск' link='/' /> : <BreadCrumbs items={BREADCRUMBSDATA} />}
       <h1 className={styles.title}>Контакты</h1>
       <div className={styles.contacts}>
         <div className={styles.contacts__item}>
@@ -23,11 +27,15 @@ const ContactsPage = () => {
         </div>
         <div className={styles.contacts__item}>
           <div className={styles.item__title}>Телефон</div>
-          <div className={styles.item__value}>+7 (391) 205-10-16</div>
+          <a href='tel:+73912051016' className={styles.item__value}>
+            +7 (391) 205-10-16
+          </a>
         </div>
         <div className={styles.contacts__item}>
           <div className={styles.item__title}>Почта</div>
-          <div className={styles.item__value}>info@dostavkakrsk.ru</div>
+          <a href='mailto:info@dostavkakrsk.ru' className={styles.item__value}>
+            info@dostavkakrsk.ru
+          </a>
         </div>
       </div>
       <div className={styles.map}>

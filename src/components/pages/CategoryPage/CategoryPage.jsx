@@ -8,6 +8,8 @@ import PayAttention from './PayAttention/PayAttention';
 import ProductCard from './ProductCard/ProductCard';
 import Pagination from '../../elements/Pagination/Pagination';
 import NotFound from '../NotFound/NotFound';
+import useWindowSize from '../../../functions/useWindowSize';
+import BackButton from '../../elements/BackButton/BackButton';
 
 const CategoryPage = () => {
   let params = useParams();
@@ -18,6 +20,10 @@ const CategoryPage = () => {
   const [category, setCategory] = useState();
   const [currentPage, setCurrentPage] = useState(1);
   const [pageCount, setPageCount] = useState(1);
+
+  const [windowWidth] = useWindowSize();
+
+  let isMobile = windowWidth < 1200;
 
   const BREADCRUMBSDATA = [
     { link: '/catalog', text: 'Каталог' },
@@ -46,7 +52,7 @@ const CategoryPage = () => {
     return (
       <div className={styles.wrapper}>
         <div className={styles.breadCrumbs}>
-          <BreadCrumbs items={BREADCRUMBSDATA} />
+          {isMobile ? <BackButton text='Каталог' link='/catalog' /> : <BreadCrumbs items={BREADCRUMBSDATA} />}
         </div>
         <h2 className={styles.title}>{category?.title}</h2>
         <div className={styles.attention}>

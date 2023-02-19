@@ -1,6 +1,10 @@
 .container {
   margin-top: 25px;
   margin-bottom: 64px;
+
+  @media (max-width: 1200px) {
+    margin-top: 8px;
+  }
 }
 .title {
   margin-bottom: 36px;
@@ -12,6 +16,11 @@
   line-height: 39px;
 
   letter-spacing: 0.05em;
+
+  @media (max-width: 1200px) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
 .content {
   display: flex;
@@ -20,9 +29,18 @@
   flex: 0 0 60%;
 
   margin-right: 45px;
+
+  @media (max-width: 1200px) {
+    flex: unset;
+    margin-right: unset;
+  }
 }
 .block {
   margin-bottom: 40px;
+
+  @media (max-width: 1200px) {
+    margin-bottom: 20px;
+  }
 }
 .block__title {
   margin-bottom: 24px;
@@ -54,5 +72,9 @@
   & img {
     width: 100%;
     object-fit: contain;
+  }
+
+  @media (max-width: 1200px) {
+    margin-bottom: 32px;
   }
 }

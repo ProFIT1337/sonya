@@ -12,16 +12,11 @@ import useWindowSize from '../../../functions/useWindowSize';
 import { useLocation } from 'react-router-dom';
 const Header = () => {
   let location = useLocation();
-  const [catalogData, setCatalogData] = useState([]);
   const [isCatalogActive, setIsCatalogActive] = useState(false);
   const [windowWidth] = useWindowSize();
 
   useEffect(() => {
-    getCatalog().then((res) => setCatalogData(res));
-  });
-  useEffect(() => {
     setIsCatalogActive(false);
-    console.log(123);
   }, [location.pathname]);
 
   return (
@@ -73,7 +68,7 @@ const Header = () => {
           <CardButton />
         </div>
       </header>
-      <div className={styles.catalogMenu}>{isCatalogActive && <CatalogMenu data={catalogData} />}</div>
+      <div className={styles.catalogMenu}>{isCatalogActive && <CatalogMenu />}</div>
     </div>
   );
 };

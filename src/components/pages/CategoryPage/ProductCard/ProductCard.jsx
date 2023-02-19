@@ -7,8 +7,7 @@ const ProductCard = ({ product }) => {
     <div className={styles.wrapper}>
       <div className={styles.img}>
         <img src={product.photo} alt={product.title} />
-        {product.in_stock && <div className={styles.inStock}>В наличии</div>}
-        {product.on_order && <div className={styles.onOrder}>Под заказ</div>}
+        {/* {product.in_stock && <div className={styles.inStock}>В наличии</div>} */}
       </div>
       <div className={styles.title}>{product.title}</div>
       <div className={styles.description}>{product.description}</div>

@@ -1,13 +1,17 @@
 import React from 'react';
+import useWindowSize from '../../../functions/useWindowSize';
+import BackButton from '../../elements/BackButton/BackButton';
 import BreadCrumbs from '../../elements/BreadCrumbs/BreadCrumbs';
 import styles from './ConfidentialPage.module.scss';
 
 const BREADCRUMBSDATA = [{ link: '/confidential', text: 'О нас' }];
 
 const ConfidentialPage = () => {
+  const [windowWidth] = useWindowSize();
+  const isMobile = windowWidth < 1200;
   return (
     <div className={styles.container}>
-      <BreadCrumbs items={BREADCRUMBSDATA} />
+      {isMobile ? <BackButton text='Икея Красноярск' link='/' /> : <BreadCrumbs items={BREADCRUMBSDATA} />}
       <h1 className={styles.title}>Политика конфиденциальности</h1>
       <div className={styles.content}>
         Настоящая Политика конфиденциальности персональных данных (далее – Политика конфиденциальности) действует в

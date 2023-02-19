@@ -2,7 +2,7 @@ import React from 'react';
 import TransparentButton from '../../TransparentButton/TransparentButton';
 import styles from './InStockItem.module.scss';
 
-const InStockItem = ({ title, photo, category, old_price, new_price, id }) => {
+const InStockItem = ({ title, photo, category, old_price, new_price }) => {
   return (
     <div className={styles.card}>
       <div className={styles.photo}>

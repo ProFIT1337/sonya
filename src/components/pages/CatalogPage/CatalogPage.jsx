@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { getCatalog } from '../../../functions/getCatalog';
 import BreadCrumbs from '../../elements/BreadCrumbs/BreadCrumbs';
 import styles from './CatalogPage.module.scss';
 import CategoryCard from './CategoryCard/CategoryCard';
@@ -8,10 +8,7 @@ import CategoryCard from './CategoryCard/CategoryCard';
 const BREADCRUMBSDATA = [{ link: '/catalog', text: 'Каталог' }];
 
 const CatalogPage = () => {
-  const [catalog, setCatalog] = useState([]);
-  useEffect(() => {
-    getCatalog().then((res) => setCatalog(res));
-  });
+  const catalog = useSelector((state) => state.catalog.catalog);
   return (
     <div className={styles.container}>
       <BreadCrumbs items={BREADCRUMBSDATA} />
@@ -29,6 +26,9 @@ const CatalogPage = () => {
                         <CategoryCard category={category} />
                       </Link>
                     ))}
+                  {[1, 2].map((i) => (
+                    <div className={styles.category + ' ' + styles.category_blank} key={i}></div>
+                  ))}
                 </div>
               </div>
             ))}

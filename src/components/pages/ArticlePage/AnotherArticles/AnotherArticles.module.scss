@@ -1,3 +1,29 @@
+.anotherArticles {
+  display: flex;
+  position: relative;
+
+  @media (max-width: 1200px) {
+    display: block;
+  }
+}
+
+.anotherArticle {
+  margin-right: 20px;
+}
+
+.title {
+  margin-bottom: 24px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+
+  color: #000000;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -11,7 +37,11 @@
   border: 1px solid #ececec;
 
   @media (max-width: 1200px) {
-    width: 100%;
+    display: block;
+    width: 81vw;
+    max-width: 343px;
+
+    margin-right: 20px;
   }
 }
 

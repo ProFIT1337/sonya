@@ -12,8 +12,21 @@ import NotFound from './components/pages/NotFound/NotFound';
 import CatalogPage from './components/pages/CatalogPage/CatalogPage';
 import ArticlePage from './components/pages/ArticlePage/ArticlePage';
 import CategoryPage from './components/pages/CategoryPage/CategoryPage';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { getCatalog } from './functions/getCatalog';
+import { getCategories } from './functions/getCategories';
+import { getBlogPosts } from './functions/getBlogPosts';
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getCatalog());
+    dispatch(getCategories());
+    dispatch(getBlogPosts());
+  }, [dispatch]);
+
   return (
     <div>
       <div className='wrapper'>

@@ -1,16 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styles from './PopularCategories.module.scss';
-import { getPopularCategories } from '../../../functions/getPopularCategories';
 import PopularCategoryCard from './PopularCategoryCard/PopularCategoryCard';
 import CustomSlider from '../CustomSlider/CustomSlider';
+import { useSelector } from 'react-redux';
 
 const PopularCategories = () => {
-  const [categories, setCategories] = useState([]);
-  useEffect(() => {
-    getPopularCategories().then((res) => {
-      setCategories(res);
-    });
-  });
+  const categories = useSelector((state) => state.categories.categories);
 
   return (
     <div className={styles.container}>
