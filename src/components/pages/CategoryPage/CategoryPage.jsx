@@ -1,25 +1,36 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useParams, useSearchParams } from 'react-router-dom';
 import BreadCrumbs from '../../elements/BreadCrumbs/BreadCrumbs';
 
 import styles from './CategoryPage.module.scss';
-import { getCategory } from '../../../functions/getCategory';
 import PayAttention from './PayAttention/PayAttention';
 import ProductCard from './ProductCard/ProductCard';
 import Pagination from '../../elements/Pagination/Pagination';
 import NotFound from '../NotFound/NotFound';
 import useWindowSize from '../../../functions/useWindowSize';
 import BackButton from '../../elements/BackButton/BackButton';
+import { useSelector } from 'react-redux';
+
+const PRODUCTS_PER_PAGE = 12;
 
 const CategoryPage = () => {
   let params = useParams();
   let slug = params.slug;
+  const [searchParams, setSearchParams] = useSearchParams();
 
-  let [searchParams, setSearchParams] = useSearchParams();
+  const categories = useSelector((state) => state.categories.categories);
+  const category = categories.find((c) => c.slug === slug);
+  const products = useSelector((state) => state.products.products);
 
-  const [category, setCategory] = useState();
+  // const [category, setCategory] = useState();
   const [currentPage, setCurrentPage] = useState(1);
-  const [pageCount, setPageCount] = useState(1);
+  const pageCount = Math.ceil(
+    products.filter((p) => {
+      let cats = p.categories;
+      let cats_ids = cats.map((c) => c.id);
+      return cats_ids.includes(category.id);
+    }).length / PRODUCTS_PER_PAGE
+  );
 
   const [windowWidth] = useWindowSize();
 
@@ -30,19 +41,14 @@ const CategoryPage = () => {
     { link: '/category/' + slug, text: category?.title },
   ];
 
-  useEffect(() => {
-    getCategory(slug).then((res) => {
-      setCategory(res || null);
-      setPageCount(Math.ceil(res.products.length / 12));
-    });
-    if (searchParams.get('page')) {
-      setCurrentPage(searchParams.get('page'));
-    }
-  }, [params]);
-
   function setPage(pageNumber) {
-    setSearchParams({ page: pageNumber });
     setCurrentPage(pageNumber);
+    let newParams = {};
+    for (let item of searchParams) {
+      newParams[item[0]] = item[1];
+    }
+    newParams['page'] = pageNumber;
+    setSearchParams(newParams);
     document.documentElement.scrollTo({
       top: 0,
       left: 0,
@@ -61,11 +67,22 @@ const CategoryPage = () => {
         <div className={styles.filters}></div>
         <div className={styles.products}>
           {category &&
-            category.products.slice((currentPage - 1) * 12, (currentPage - 1) * 12 + 12).map((product) => (
-              <div className={styles.product} key={product.id}>
-                <ProductCard product={product} />
-              </div>
-            ))}
+            products &&
+            products
+              .filter((p) => {
+                let cats = p.categories;
+                let cats_ids = cats.map((c) => c.id);
+                return cats_ids.includes(category.id);
+              })
+              .slice((currentPage - 1) * PRODUCTS_PER_PAGE, (currentPage - 1) * PRODUCTS_PER_PAGE + PRODUCTS_PER_PAGE)
+              .map((product) => (
+                <div className={styles.product} key={product.id}>
+                  <ProductCard product={product} />
+                </div>
+              ))}
+          {[1, 2].map((i) => (
+            <div className={styles.product + ' ' + styles.product_blank} key={i}></div>
+          ))}
         </div>
         <div className={styles.description}>{category?.description}</div>
         {pageCount > 1 && (

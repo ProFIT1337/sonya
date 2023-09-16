@@ -17,6 +17,21 @@ import { useDispatch } from 'react-redux';
 import { getCatalog } from './functions/getCatalog';
 import { getCategories } from './functions/getCategories';
 import { getBlogPosts } from './functions/getBlogPosts';
+import { getProducts } from './functions/getProducts';
+import ProductPage from './components/pages/ProductPage/ProductPage';
+import SearchPage from './components/pages/SearchPage/SearchPage';
+import { getOrder } from './functions/orderFunctions';
+import OrderPage from './components/pages/OrderPage/OrderPage';
+
+// function addProductToOrder(order, setOrder, product) {
+//   let old_order = { ...order };
+//   if (old_order[product.title]) {
+//     old_order[product.title].quantity += 1;
+//   } else {
+//     old_order[product.title] = { quantity: 1, product: product };
+//   }
+//   setOrder(old_order);
+// }
 
 function App() {
   const dispatch = useDispatch();
@@ -25,6 +40,8 @@ function App() {
     dispatch(getCatalog());
     dispatch(getCategories());
     dispatch(getBlogPosts());
+    dispatch(getProducts());
+    dispatch(getOrder());
   }, [dispatch]);
 
   return (
@@ -42,6 +59,9 @@ function App() {
           <Route path='/blog/:slug' element={<ArticlePage />} />
           <Route path='/catalog' element={<CatalogPage />} />
           <Route path='/categories/:slug' element={<CategoryPage />} />
+          <Route path='/products/:slug' element={<ProductPage />} />
+          <Route path='/search' element={<SearchPage />} />
+          <Route path='/order' element={<OrderPage />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </div>

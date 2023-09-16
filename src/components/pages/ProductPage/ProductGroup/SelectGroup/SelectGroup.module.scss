@@ -1,0 +1,134 @@
+.wrapper {
+  position: relative;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 8px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+
+  color: #8e8e8e;
+}
+.choicesContainer {
+  position: relative;
+}
+.activeChoice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  background-color: #ececec;
+
+  user-select: none;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  &::after {
+    content: url(../../../../../img/catalogMenuArrow.svg);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+
+    height: 16px;
+
+    transform: translateY(-50%) rotateZ(90deg);
+    transform-origin: 50% 50%;
+
+    transition: transform 0.3s ease;
+
+    padding: 0;
+    margin: 0;
+  }
+  &.active {
+    &::after {
+      transform: translateY(-50%) rotateZ(270deg);
+    }
+  }
+}
+.choices {
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  position: absolute;
+  top: 48px;
+  width: 100%;
+
+  border-radius: 8px;
+
+  z-index: 1000;
+}
+
+.choice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  background-color: #ececec;
+
+  border-bottom: 1px #c4c4c4 solid;
+
+  user-select: none;
+
+  cursor: pointer;
+
+  color: #000;
+  text-decoration: none;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+  &.active {
+    font-weight: 600;
+
+    &::after {
+      content: url('../../../../../img/active.svg');
+      position: absolute;
+      top: 50%;
+      right: 15px;
+
+      transform: translateY(-50%);
+    }
+  }
+}

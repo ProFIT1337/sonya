@@ -1,14 +1,15 @@
 import React from 'react';
 import styles from './TransparentButton.module.scss';
 
-const TransparentButton = ({ text, onClickFunc }) => {
+const TransparentButton = ({ text, onClickFunc, disabled = false }) => {
   return (
     <button
       type='button'
-      onClick={() => {
-        onClickFunc();
+      onClick={(e) => {
+        onClickFunc(e);
       }}
-      className={styles.button}>
+      className={styles.button}
+      disabled={disabled}>
       {text}
     </button>
   );

@@ -1,0 +1,176 @@
+.wrapper {
+  margin-top: 64px;
+}
+.title {
+  margin: 0;
+  margin-bottom: 32px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 39px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 24px;
+}
+
+.selectAll {
+  display: flex;
+  align-items: center;
+
+  margin-right: 24px;
+  label {
+    margin-left: 16px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    letter-spacing: 0.05em;
+  }
+}
+
+.delete {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+
+  color: #f2271a;
+
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.products {
+  border-top: 1px solid #8e8e8e;
+
+  flex: 1 0 60%;
+  max-width: 782px;
+
+  margin-bottom: 32px;
+
+  margin-right: 65px;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  padding-top: 27px;
+}
+
+.more {
+  margin-bottom: 64px;
+}
+
+.menu {
+  width: 100%;
+  height: min-content;
+
+  padding: 20px;
+  border: 0.5px solid #c4c4c4;
+  border-radius: 8px;
+}
+
+.sum {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 6px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.05em;
+}
+
+.productsCount {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 6px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+
+  color: #8e8e8e;
+}
+
+.sale {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 40px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+
+  color: #8e8e8e;
+}
+
+.makeOrder {
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  background-color: #000;
+
+  border: 0;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #fff;
+
+  cursor: pointer;
+}
+
+.orderingModal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+
+  transition: 0.3s ease background;
+}

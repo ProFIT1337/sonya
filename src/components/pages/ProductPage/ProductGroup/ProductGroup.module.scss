@@ -1,0 +1,8 @@
+.wrapper {
+  width: 100%;
+  max-width: 424px;
+
+  @media (max-width: 1200px) {
+    max-width: unset;
+  }
+}

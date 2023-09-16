@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { getInStockProducts } from '../../../functions/getInStockProducts';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import CustomSlider from '../CustomSlider/CustomSlider';
 import styles from './InStock.module.scss';
 import InStockItem from './InStockItem/InStockItem';
 
 function InStock({ title = 'В наличии на складе' }) {
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    getInStockProducts().then((res) => setProducts(res));
-  });
-  return (
-    <div>
-      <CustomSlider title={title} SlideElement={InStockItem} data={products} />
-    </div>
-  );
+  const products = useSelector((state) => state.products.products);
+
+  if (products) {
+    return (
+      <div className={styles.products}>
+        <CustomSlider title={title} SlideElement={InStockItem} data={products} />
+      </div>
+    );
+  }
 }
 export default InStock;

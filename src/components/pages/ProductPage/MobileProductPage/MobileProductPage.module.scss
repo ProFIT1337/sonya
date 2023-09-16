@@ -1,0 +1,315 @@
+.wrapper {
+  padding-bottom: 64px;
+  padding-top: 20px;
+
+  position: relative;
+}
+.info_header {
+  position: relative;
+}
+
+.photos {
+  position: relative;
+
+  margin-bottom: 16px;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  img {
+    max-height: 343px;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.photos__counter {
+  position: absolute;
+  bottom: 6px;
+  left: 4px;
+
+  padding: 8px 13px;
+
+  border-radius: 16px;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
+}
+
+.title {
+  display: inline-block;
+  margin: 0;
+
+  padding-right: 100px;
+
+  margin-bottom: 4px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 39px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+}
+.inStock {
+  display: inline-block;
+
+  position: absolute;
+
+  right: 0;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  background-color: #e6fff0;
+  padding: 4px;
+  border-radius: 4px;
+
+  margin-bottom: 4px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #00953c;
+}
+
+.shortDescription {
+  margin-bottom: 4px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+}
+
+.vendorCode {
+  margin-bottom: 16px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+
+  color: #8e8e8e;
+}
+.groups {
+  margin-bottom: 16px;
+}
+.group {
+  margin-bottom: 16px;
+}
+
+.prices {
+  justify-self: flex-end;
+  display: grid;
+  margin-top: auto;
+
+  margin-bottom: 16px;
+}
+
+.oldPrice {
+  display: inline;
+  position: relative;
+
+  width: min-content;
+
+  left: 4px;
+
+  margin-bottom: 0;
+
+  grid-column: 1/2;
+  grid-row: 1/2;
+
+  white-space: nowrap;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+
+  color: #c4c4c4;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: calc(100% + 8px);
+    height: 1px;
+    left: -4px;
+    background-color: #c4c4c4;
+  }
+}
+.newPrice {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+
+  color: #000000;
+}
+.addOrder {
+  grid-column: 2/3;
+  grid-row: 1/3;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.description {
+  width: 100%;
+  max-width: 746px;
+
+  margin-bottom: 16px;
+}
+.descriptionTitle {
+  margin-bottom: 8px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+
+  color: #8e8e8e;
+}
+
+.descriptionText {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  /* or 138% */
+
+  letter-spacing: 0.05em;
+}
+
+.about {
+  margin-bottom: 16px;
+}
+
+.recommended {
+  margin-bottom: 48px;
+}
+
+.modal {
+  position: fixed;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 10000;
+
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  user-select: none;
+}
+
+.modal__image {
+  position: relative;
+  height: 80vh;
+  max-width: 70vw;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.modal__cross {
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  top: 10px;
+  right: -50px;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  background-color: #404040;
+}
+
+.modal__arrow {
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  top: 50%;
+
+  width: 40px;
+  height: 40px;
+
+  transform: translateY(-50%);
+
+  border-radius: 50%;
+
+  background-color: #404040;
+}
+
+.modal__nextArrow {
+  right: -50px;
+
+  transform: translateY(-50%) rotateZ(180deg);
+}
+.modal__prevArrow {
+  left: -50px;
+}

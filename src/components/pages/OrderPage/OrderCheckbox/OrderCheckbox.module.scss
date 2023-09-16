@@ -1,0 +1,28 @@
+.checkbox {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  border: 2px solid #8e8e8e;
+  border-radius: 6px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+
+  transition: 0.3s ease background-color;
+
+  &:checked {
+    border: 0;
+    background-color: #000;
+
+    &::after {
+      content: url(../../../../img/checkbox.svg);
+      position: absolute;
+      top: 0;
+      left: 0px;
+      //   background-color: #fff;
+      //   width: 1px;
+      //   height: 8px;
+    }
+  }
+}

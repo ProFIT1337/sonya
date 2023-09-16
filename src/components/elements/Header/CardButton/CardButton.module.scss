@@ -1,4 +1,6 @@
 .button {
+  position: relative;
+
   text-decoration: none;
 
   display: flex;
@@ -14,7 +16,32 @@
     min-width: 30px;
   }
 }
+.bubble {
+  position: absolute;
+  top: 0;
+  right: 4px;
 
+  padding: 2px 3px 1px 3px;
+
+  border-radius: 30px;
+
+  background-color: #f2271a;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
+
+  @media (max-width: 1200px) {
+    right: 0;
+  }
+}
 .img {
 }
 .text {

@@ -1,0 +1,49 @@
+.wrapper {
+  position: relative;
+  input {
+    width: 100%;
+
+    border: 0;
+    border-bottom: #c4c4c4 1px solid;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    letter-spacing: 0.05em;
+
+    color: #000000;
+    &:focus {
+      outline: 0;
+    }
+  }
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    letter-spacing: 0.05em;
+
+    color: #8e8e8e;
+
+    transition: 0.3s ease font-size, 0.3s ease line-height, 0.3s ease top, 0.3s ease left;
+  }
+  &.onFocus {
+    label {
+      top: -18px;
+
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+}

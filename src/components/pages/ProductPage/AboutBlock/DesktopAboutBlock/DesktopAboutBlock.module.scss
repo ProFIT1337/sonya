@@ -1,0 +1,141 @@
+.wrapper {
+  padding: 20px;
+
+  background-color: #f2f2f2;
+
+  display: grid;
+  grid-template-columns: 300px auto;
+
+  @media (max-width: 1200px) {
+    position: relative;
+    left: -19px;
+    width: 100vw;
+  }
+}
+.title {
+  margin-bottom: 24px;
+
+  grid-column: 1/3;
+  grid-row: 1/2;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+}
+
+.nav {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.nav__items {
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 25px;
+}
+.nav__item {
+  position: relative;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+
+  &::after {
+    content: '';
+    position: absolute;
+
+    left: 0;
+    top: calc(100% + 4px);
+
+    width: 0;
+    height: 1px;
+
+    background-color: #000;
+
+    transition: width 0.3s ease;
+  }
+
+  &.active {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    letter-spacing: 0.05em;
+
+    &::after {
+      width: 70px;
+    }
+  }
+}
+
+.content {
+  grid-column: 2/3;
+  grid-row: 2/3;
+
+  display: flex;
+
+  column-gap: 32px;
+  row-gap: 20px;
+
+  flex-wrap: wrap;
+
+  width: 100%;
+  height: 100%;
+}
+.category {
+  flex: 0 0 45%;
+}
+.category__title {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+}
+
+.specification {
+  display: flex;
+  justify-content: space-between;
+}
+.spec__photo {
+  margin-top: 24px;
+}
+
+.spec__title {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height, or 138% */
+
+  letter-spacing: 0.05em;
+
+  color: #8e8e8e;
+}
+.spec__value {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height, or 138% */
+
+  letter-spacing: 0.05em;
+
+  color: #000000;
+}

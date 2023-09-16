@@ -1,0 +1,300 @@
+.modalCard {
+  position: relative;
+  overflow: auto;
+  top: 103px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  width: 713px;
+  height: min-content;
+  max-height: 70vh;
+  padding: 48px 136px 172px 48px;
+}
+
+.modalTitle {
+  margin-bottom: 48px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 39px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+}
+
+.modalDescription {
+  margin-bottom: 32px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+
+  color: #8e8e8e;
+}
+.fio {
+  margin-bottom: 32px;
+}
+.phone {
+  margin-bottom: 32px;
+}
+.email {
+  margin-bottom: 32px;
+}
+
+.delivery {
+  margin-bottom: 51px;
+}
+.deliveryTitle {
+  margin-bottom: 27px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+}
+.deliveryItem {
+  margin-bottom: 44px;
+  display: flex;
+  align-items: center;
+}
+.deliveryCheckbox {
+  margin-right: 16px;
+}
+.deliveryCheckboxTitle {
+  margin-bottom: 4px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+}
+.deliveryText {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.05em;
+
+  color: #8e8e8e;
+}
+.town {
+  margin-bottom: 44px;
+}
+.street {
+  margin-bottom: 44px;
+}
+.house {
+  margin-bottom: 44px;
+}
+.flat {
+  margin-bottom: 44px;
+}
+
+.lift {
+  display: flex;
+  align-items: center;
+  margin-bottom: 44px;
+}
+.liftText {
+  padding-left: 10px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+
+  color: #8e8e8e;
+}
+.assembly {
+  display: flex;
+  align-items: center;
+  margin-bottom: 44px;
+}
+.assemblyText {
+  padding-left: 10px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+
+  color: #8e8e8e;
+}
+
+.card {
+  margin-bottom: 24px;
+}
+
+.card_title {
+  margin-bottom: 8px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+}
+.card_items {
+  height: 300px;
+  overflow: scroll;
+  padding-right: 10px;
+}
+
+.card_item {
+  display: flex;
+  height: 150px;
+  padding: 18px 0px 22px 0px;
+}
+
+.product__image {
+  height: 100%;
+  width: 105px;
+
+  margin-right: 19px;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.product__info {
+  width: 400px;
+}
+
+.product__title {
+  margin-bottom: 4px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+}
+.product_description {
+  margin-bottom: 4px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+
+  color: #8e8e8e;
+}
+.vendor_code {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+
+  color: #8e8e8e;
+}
+
+.right_column {
+  width: min-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: end;
+}
+.price {
+  margin-bottom: 8px;
+  white-space: nowrap;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+}
+
+.product__counter {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  text-align: right;
+  letter-spacing: 0.05em;
+
+  color: #8e8e8e;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 34px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.05em;
+}
+
+.comment {
+  margin-bottom: 24px;
+}
+
+.submit {
+  width: 188px;
+
+  margin-bottom: 24px;
+}
+
+.policy {
+  width: 360px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.05em;
+
+  color: #8e8e8e;
+
+  a {
+    text-decoration-line: underline;
+
+    color: #007abf;
+  }
+}

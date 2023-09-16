@@ -15,4 +15,9 @@
       fill: #000;
     }
   }
+  &.small {
+    top: -33px;
+    right: 27px;
+    transform: scale(0.7);
+  }
 }

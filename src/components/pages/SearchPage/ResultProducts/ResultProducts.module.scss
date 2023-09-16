@@ -1,0 +1,58 @@
+.counter {
+  margin-bottom: 40px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height, or 138% */
+
+  letter-spacing: 0.05em;
+
+  @media (max-width: 1200px) {
+    margin-bottom: 20px;
+  }
+}
+
+.products {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin-bottom: 40px;
+
+  @media (max-width: 1200px) {
+    margin-bottom: 20px;
+  }
+}
+
+.products {
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 40px;
+
+  @media (max-width: 1200px) {
+    justify-content: space-between;
+
+    // column-gap: 8px;
+    row-gap: 23px;
+  }
+}
+.product {
+  @media (max-width: 1200px) {
+    flex: 0 0 28%;
+  }
+  @media (max-width: 700px) {
+    flex: 0 0 45%;
+  }
+  // @media (max-width: 400px) {
+  //   flex: 0 0 100%;
+  // }
+}
+
+.pagination {
+  margin-bottom: 64px;
+}
